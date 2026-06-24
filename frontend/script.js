@@ -14,7 +14,7 @@ async function sendMessage() {
 
     chatBox.innerHTML +=
         `<div class="user">
-            <b>You:</b> ${message}
+            <span>${message}</span>
         </div>`;
 
     input.value = "";
@@ -41,7 +41,7 @@ async function sendMessage() {
 
     chatBox.innerHTML +=
         `<div class="bot">
-            <b>Bot:</b> ${data.response}
+            <span>${data.response}</span>
         </div>`;
 
     chatBox.scrollTop =
@@ -67,7 +67,7 @@ async function loadChatHistory() {
 
             chatBox.innerHTML +=
                 `<div class="user">
-                    <b>You:</b> ${message.content}
+                    <span>${message.content}</span>
                 </div>`;
         }
 
@@ -75,7 +75,7 @@ async function loadChatHistory() {
 
             chatBox.innerHTML +=
                 `<div class="bot">
-                    <b>Bot:</b> ${message.content}
+                    <span>${message.content}</span>
                 </div>`;
         }
 
@@ -95,4 +95,3 @@ document
 
     });
 
-    
