@@ -1,4 +1,20 @@
+const username =
+    localStorage.getItem("username");
+
+if (!username) {
+
+    window.location.href =
+        "login.html";
+
+}
+
+
 window.onload = loadChatHistory;
+
+document.getElementById(
+    "welcome-user"
+).innerText =
+    "Welcome, " + localStorage.getItem("username");
 
 async function sendMessage() {
 
@@ -94,4 +110,15 @@ document
         }
 
     });
+
+
+    function logout() {
+
+    localStorage.removeItem(
+        "username"
+    );
+
+    window.location.href =
+        "login.html";
+}
 
